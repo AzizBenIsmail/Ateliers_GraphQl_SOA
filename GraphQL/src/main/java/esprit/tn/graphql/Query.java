@@ -20,6 +20,9 @@ public class Query implements GraphQLRootResolver {
 		return studentRepository.getAllStudents();
 		}
 
-		 
+
+		public Student Recherche(String cin) {
+		return studentRepository.getStudentsByCin(cin);
+		}
 		
 }

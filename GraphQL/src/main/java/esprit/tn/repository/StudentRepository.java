@@ -12,7 +12,7 @@ public class StudentRepository {
 		public StudentRepository() {
 		students = new ArrayList<Student>();
 
-		students.add(new Student("@123456780", "Test Ben TEST", "test@esprit.tn”"));
+		students.add(new Student("123456780", "Test Ben TEST", "test@esprit.tn"));
 		students.add(new Student("22551100", "Mohamed ben SALAH", "med.salsahfesprit.tn"));
 
 		}
@@ -24,6 +24,14 @@ public class StudentRepository {
 		public void saveStudent(Student student) {
 		students.add(student);
 
-		 
 		}
+		
+		public Student getStudentsByCin(String c) {
+			for(Student st:students) {
+				if(st.getCin().equals(c))
+					return st;		
+			}
+			return null;
+			}
+		
 }

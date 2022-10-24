@@ -6,7 +6,11 @@ type Student {
 
 type Query {
 	allStudents: [Student]
+	Recherche(cin: String):Student
+	
 }
+
+
 
 schema {
 	query: Query
